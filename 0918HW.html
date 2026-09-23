@@ -15,6 +15,7 @@
           <span>基本資料 / Basic Ination</span>
         </h2>
         <div>
+          <br />
           <label for="Name">姓名 / Name</label><span class="required">*</span>
           <input
             type="text"
@@ -25,20 +26,23 @@
           />
         </div>
         <div>
+          <br />
           <label for="Gender">性別 / Gender</label>
-          <input type="radio" name="gender" id="male" />
+          <input type="radio" name="male" id="male" value="male" />
           <label for="male"> 男 / male</label>
-          <input type="radio" name="gender" id="female" />
+          <input type="radio" name="female" id="female" value="female" />
           <label for="female"> 女 / female</label>
         </div>
         <div>
+          <br />
           <label for="Nationality">國籍 / Nationality</label>
-          <input type="radio" name="nationality" id="ROC-C" />
+          <input type="radio" name="ROC-C" id="ROC-C" value="ROC-C" />
           <label for="ROC-C">本國國籍 / ROC-Citizens</label>
-          <input type="radio" name="nationality" id="Non-C" />
+          <input type="radio" name="Non-C" id="Non-C" value="Non-C" />
           <label for="Non-C">外國國籍 / Non-Citizens</label>
         </div>
         <div>
+          <br />
           <label for="ID">身份證號 / ID Number</label>
           <span class="required">*</span>
           <input
@@ -50,8 +54,9 @@
           />
         </div>
         <div>
+          <br />
           <label for="Birth">出生日期 / Date Of Birth</label>
-          <select name="year" id="year">
+          <select name="Birth-year" id="year">
             <option>年 Year</option>
             <option>2008年</option>
             <option>2007年</option>
@@ -65,7 +70,7 @@
             <option>1999年</option>
             <option>1998年</option>
           </select>
-          <select name="Month" id="Month">
+          <select name="Birth-Month" id="Month">
             <option>月 Month</option>
             <option>01月</option>
             <option>02月</option>
@@ -80,7 +85,7 @@
             <option>11月</option>
             <option>12月</option>
           </select>
-          <select name="Day" id="Day">
+          <select name="Birth-Day" id="Day">
             <option>日 Day</option>
             <option>01日</option>
             <option>02日</option>
@@ -116,6 +121,7 @@
           </select>
         </div>
         <div>
+          <br />
           <label for="Email">電子信箱 / Email</label
           ><span class="required">*</span>
           <input
@@ -127,20 +133,27 @@
           />
         </div>
         <div>
+          <br />
           <label for="Contact Number">聯絡電話 / Contact Number</label>
-          <label for="cell phone">手機 / Mobile</label>
+          <label for="cell-phone">手機 / Mobile</label>
           <input
-            type="cell phone"
-            name="cell phone"
-            id="cell phone"
+            type="tel"
+            name="cell-phone"
+            id="cell-phone"
             placeholder="0922053012"
           />
-          <label for="Home">住家 / Home</label>
-          <input type="Home" name="Home" id="Home" placeholder="0225855659" />
-          <label for="Office">公司 / Office</label>
-          <input type="Office" name="Office" id="Office" />
+          <label for="tel-phone">住家 / Home</label>
+          <input
+            type="tel"
+            name="tel-phone"
+            id="tel-phone"
+            placeholder="0225855659"
+          />
+          <label for="tel-office">公司 / Office</label>
+          <input type="tel" name="tel-office" id="tel-office" />
         </div>
         <div>
+          <br />
           <label for="Mailing Address">通訊地址 / Mailing Address</label>
           <select name="City" id="City">
             <option>請選擇縣市別 County/City</option>
@@ -158,26 +171,35 @@
             type="text"
             name="postcode"
             id="postcode"
-            placeholder="郵遞區號 例如:昌吉街55號2樓206室"
+            placeholder="郵遞區號"
+          />
+          <input
+            type="text"
+            name="Address"
+            id="Address"
+            placeholder="例如:昌吉街55號2樓206室"
           />
         </div>
         <div>
+          <br />
           <label for="Emergency Contact"
             >緊急聯絡人姓名 / Name of Emergency Contact</label
           >
           <input type="text" name="Emergency Contact" id="Emergency Contact" />
           <label for="Relationship">關係 / Relationship</label>
           <input type="text" name="Relationship" id="Relationship" />
-          <label for="Phone">電話 / Phone</label>
-          <input type="Phone" name="Phone" id="Phone" />
+          <label for="Emergency Phone">電話 / Phone</label>
+          <input type="tel" name="Emergency Phone" id="Emergency Phone" />
         </div>
       </section>
 
       <section>
+        <hr />
         <h2>
           <span>競賽項目資料 / Race Category Ination</span>
         </h2>
         <div>
+          <br />
           <input type="checkbox" name="sizeA" id="sizeA" />
           <label for="sizeA"> 9KM (NTD 800)</label>
           <select name="check-size" id="check-size">
@@ -188,6 +210,7 @@
           </select>
         </div>
         <div>
+          <br />
           <input type="checkbox" name="sizeB" id="sizeB" />
           <label for="sizeB"> 3KM (NTD 650)</label>
           <select name="check-size" id="check-size">
@@ -200,18 +223,27 @@
       </section>
 
       <section>
+        <hr />
         <h2>
           <span>報到方式(二擇一) / Check-in Method</span>
         </h2>
         <div>
+          <br />
           <label for="Postal">郵寄代理報到 / Postal delivery check-in</label>
-          <input type="radio" name="checkin" id="checkin-A" />
-          <label for="checkin-A"> 是 / Y(需額外付費，限台灣本島)</label>
-          <input type="radio" name="checkin" id="checkin-B" />
-          <label for="checkin-B"> 否 / N</label>
+          <input type="radio" name="checkin" id="Y" value="Y" />
+          <label for="Y"> 是 / Y(需額外付費，限台灣本島)</label>
+          <input type="radio" name="checkin" id="N" value="N" />
+          <label for="N"> 否 / N</label>
         </div>
         <div>
-          <input type="radio" name="location" id="location" checked />
+          <br />
+          <input
+            type="radio"
+            name="location"
+            id="location"
+            value="location"
+            checked
+          />
           <label for="location">地點：花博爭豔館(臺北市中山區玉門街1號) </label>
           時間：
           <input type="date" value="2026-12-17" />
@@ -221,10 +253,12 @@
       </section>
 
       <section>
+        <hr />
         <h2>
           <span>其他 / Others</span>
         </h2>
         <div>
+          <br />
           <label for="website">個人網站 / Website(選填)</label>
           <input
             type="text"
@@ -234,17 +268,18 @@
           />
         </div>
         <div>
+          <br />
           <label for="Note">備註 / Note</label>
           <textarea
             cols="50"
             rows="5"
-            type="text"
             name="Note"
             id="Note"
             placeholder="如有特殊需求請於此說明"
           ></textarea>
         </div>
         <div>
+          <br />
           <label for="Photo">上傳證件照 / Upload Photo</label>
           <input type="file" />
         </div>

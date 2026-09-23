@@ -15,8 +15,11 @@ h2 span {
 }
 
 /* 線 */
-.section {
-  border-bottom: 2px solid #525c91;
+hr {
+  height: 2px;
+  background-color: #525c91;
+  border-style: none;
+  margin: 0;
 }
 
 /* 按鈕共通set */
