@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <title>tigerair</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/1016HW.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navLeft">
+          <?xml version="1.0" encoding="UTF-8"?><svg
+            id="menu"
+            tabindex=""
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            color="#000000"
+          >
+            <path
+              d="M3 5H21"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M3 12H21"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M3 19H21"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <img src="https://www.tigerairtw.com/assets/zh-TW-DYtL0a4x.svg" />
+          <span class="separate">|</span>
+          <!-- ======================== -->
+          <div class="ready">
+            <a href="#" class="hoverTitle">準備出發</a>
+            <div class="menuReady">
+              <span class="book">預定航班</span>
+              <div class="leftPart">
+                <a href="#">時刻表</a>
+                <a href="#">航點資訊</a>
+                <a href="#">低價航點地圖</a>
+                <a href="#">票價組合</a>
+                <a href="#">票務相關</a>
+              </div>
+
+              <span class="tack">搭乘航班</span>
+              <div class="rightPart">
+                <a href="#">座位說明與費用</a>
+                <a href="#">手提及托運行李費用</a>
+                <a href="#">轉機服務</a>
+                <a href="#">特殊需求</a>
+                <a href="#">管理訂單</a>
+              </div>
+            </div>
+          </div>
+          <!-- ======================== -->
+          <span class="separate">|</span>
+          <div class="welcome">
+            <a href="#" class="hoverTitle">歡迎登機</a>
+            <div class="menuWelcome">
+              <span class="tackTaiHu">搭乘台虎</span>
+              <div class="welcomePart">
+                <a href="#">搭乘須知</a>
+                <a href="#">行李規定</a>
+                <a href="#">自助報到</a>
+                <a href="#">機上餐點</a>
+                <a href="#">機上娛樂</a>
+                <a href="#">虎禮選購物網</a>
+              </div>
+            </div>
+          </div>
+          <!-- ======================== -->
+          <span class="separate">|</span>
+          <div class="coupons">
+            <a href="#" class="hoverTitle">虎迷優惠</a>
+            <div class="menuCoupons">
+              <span class="couponsTaiHu">虎迷優惠</span>
+              <div class="couponsPart">
+                <a href="#">信用卡購票優惠</a>
+                <a href="#">eSIM高速上網</a>
+                <a href="#">專屬福利</a>
+                <a href="#">旅遊保險</a>
+                <a href="#">行李寄送</a>
+                <a href="#">票券體驗行程</a>
+                <a href="#">機場接送</a>
+              </div>
+            </div>
+          </div>
+          <!-- ======================== -->
+          <span class="separate">|</span>
+          <div class="notice">
+            <a href="#" class="hoverTitle">虎迷須知</a>
+            <div class="menuNotice">
+              <span class="noticeTaiHu">關於幫助</span>
+              <div class="noticePart">
+                <a href="#">購票攻略</a>
+                <a href="#">付款方式</a>
+                <a href="#">常見問題</a>
+                <a href="#">聯繫我們</a>
+                <a href="#">tigerclub會員回饋</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="navRight">
+          <div class="titleDiv" tabindex="">
+            <?xml version="1.0" encoding="UTF-8"?><svg
+              class="titleIcons"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              color="#000000"
+            >
+              <path
+                class="flySreach"
+                d="M17 17L21 21"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                class="flySreach"
+                d="M3 11C3 15.4183 6.58172 19 11 19C13.213 19 15.2161 18.1015 16.6644 16.6493C18.1077 15.2022 19 13.2053 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <span class="hoverTitle">航班搜尋</span>
+          </div>
+
+          <div class="hoverTitle titleDiv" id="login" tabindex="">
+            <?xml version="1.0" encoding="UTF-8"?><svg
+              class="titleIcons"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              color="#000000"
+            >
+              <path
+                d="M5 20V19C5 15.134 8.13401 12 12 12V12C15.866 12 19 15.134 19 19V20"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <span>登入/註冊</span>
+          </div>
+
+          <div class="hoverTitle titleDiv" id="lang" tabindex="">
+            <?xml version="1.0" encoding="UTF-8"?><svg
+              class="titleIcons"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              color="#000000"
+            >
+              <path
+                d="M2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M13 2.04932C13 2.04932 16 5.99994 16 11.9999C16 17.9999 13 21.9506 13 21.9506"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M11 21.9506C11 21.9506 8 17.9999 8 11.9999C8 5.99994 11 2.04932 11 2.04932"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M2.62964 15.5H21.3704"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M2.62964 8.5H21.3704"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <span>繁中</span>
+          </div>
+
+          <div class="hoverTitle titleDiv" id="twd" tabindex="">
+            <?xml version="1.0" encoding="UTF-8"?><svg
+              class="titleIcons"
+              width="24px"
+              height="24px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              color="#000000"
+            >
+              <path
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M15 8.5C14.315 7.81501 13.1087 7.33855 12 7.30872M9 15C9.64448 15.8593 10.8428 16.3494 12 16.391M12 7.30872C10.6809 7.27322 9.5 7.86998 9.5 9.50001C9.5 12.5 15 11 15 14C15 15.711 13.5362 16.4462 12 16.391M12 7.30872V5.5M12 16.391V18.5"
+                stroke="#000000"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <span>TWD</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="banner">
+      <img src="kaede.jpg" alt="楓" id="imgWindow" />
+      <img
+        id="imgMobile"
+        class="q-img__image q-img__image--with-transition q-img__image--loaded"
+        height="210px"
+        width="100%"
+        loading="lazy"
+        fetchpriority="auto"
+        aria-hidden="true"
+        draggable="false"
+        src="tigerair.jpg"
+        style="object-fit: cover; object-position: 50% 50%"
+      />
+    </div>
+
+    <div class="search">
+      <div class="table">
+        <div id="flySreach">
+          <?xml version="1.0" encoding="UTF-8"?><svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            color="#000000"
+          >
+            <path
+              class="flyLogo"
+              d="M10.5 4.5V9.16745C10.5 9.37433 10.3934 9.56661 10.218 9.67625L2.782 14.3237C2.60657 14.4334 2.5 14.6257 2.5 14.8325V15.7315C2.5 16.1219 2.86683 16.4083 3.24552 16.3136L9.75448 14.6864C10.1332 14.5917 10.5 14.8781 10.5 15.2685V18.2277C10.5 18.4008 10.4253 18.5654 10.2951 18.6793L8.13481 20.5695C7.6765 20.9706 8.03808 21.7204 8.63724 21.6114L11.8927 21.0195C11.9636 21.0066 12.0364 21.0066 12.1073 21.0195L15.3628 21.6114C15.9619 21.7204 16.3235 20.9706 15.8652 20.5695L13.7049 18.6793C13.5747 18.5654 13.5 18.4008 13.5 18.2277V15.2685C13.5 14.8781 13.8668 14.5917 14.2455 14.6864L20.7545 16.3136C21.1332 16.4083 21.5 16.1219 21.5 15.7315V14.8325C21.5 14.6257 21.3934 14.4334 21.218 14.3237L13.782 9.67625C13.6066 9.56661 13.5 9.37433 13.5 9.16745V4.5C13.5 3.67157 12.8284 3 12 3C11.1716 3 10.5 3.67157 10.5 4.5Z"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <a href="" id="flySreachSpan">航班</a>
+        </div>
+        <div class="cardLogo" tabindex="">
+          <?xml version="1.0" encoding="UTF-8"?><svg
+            class="cardLogo"
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            color="#000000"
+          >
+            <path
+              d="M22 9V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V9ZM22 9H6"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M16.5 13.3819C16.7654 13.1444 17.1158 13 17.5 13C18.3284 13 19 13.6716 19 14.5C19 15.3284 18.3284 16 17.5 16C17.1158 16 16.7654 15.8556 16.5 15.6181"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M16.5 13.3819C16.2346 13.1444 15.8842 13 15.5 13C14.6716 13 14 13.6716 14 14.5C14 15.3284 14.6716 16 15.5 16C15.8842 16 16.2346 15.8556 16.5 15.6181"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <a href="">樂虎卡</a>
+        </div>
+        <div class="huWine" tabindex="">
+          <svg
+            class="huWine"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 24"
+            width="50"
+            height="24"
+            fill="currentColor"
+          >
+            <path
+              d="M10.3048 7.40649C9.36666 7.40649 8.60156 6.64139 8.60156 5.70324C8.60156 4.76509 9.37576 4 10.3048 4C11.2338 4 12.0081 4.74688 12.0081 5.70324C12.0081 6.65961 11.2338 7.40649 10.3048 7.40649Z"
+            ></path>
+            <path
+              d="M28.7755 9.71063C28.9941 9.0184 29.9596 8.44458 30.5516 8.44458C31.0071 8.44458 31.3349 8.6905 31.3349 9.16413V9.89279C31.3349 10.3573 30.916 10.6032 30.4514 10.6032C29.3858 10.6032 28.8666 11.5141 28.8666 12.6071V14.4925C28.8666 14.957 28.6207 15.2029 28.1562 15.2029H27.3364C26.8719 15.2029 26.626 14.957 26.626 14.4925V9.22789C26.626 8.76337 26.8719 8.51745 27.3364 8.51745H28.0651C28.5296 8.51745 28.7846 8.76337 28.7846 9.22789V9.71974"
+            ></path>
+            <path
+              d="M4.89261 10.4214H4.70134C4.24592 10.4214 4 10.1754 4 9.71092V9.38302C4 8.9185 4.24592 8.67258 4.71044 8.67258H4.95637V7.46118C4.95637 6.99666 5.20229 6.75073 5.67592 6.75073H6.4319C6.90553 6.75073 7.15146 6.99666 7.15146 7.46118V8.67258H7.83458C8.2991 8.67258 8.55413 8.9185 8.55413 9.38302V9.71092C8.55413 10.1754 8.30821 10.4214 7.85279 10.4214H7.15146V12.4434C7.15146 13.0172 7.5249 13.2358 7.93477 13.2905C8.45394 13.3542 8.64521 13.5182 8.64521 14.01V14.5929C8.64521 15.1212 8.31731 15.3034 7.72528 15.3034C6.74159 15.3034 4.91083 14.848 4.91083 12.8624V10.4214"
+            ></path>
+            <path
+              d="M9.18262 9.21899C9.18262 8.75447 9.42854 8.50854 9.90217 8.50854H10.7219C11.1864 8.50854 11.4324 8.75447 11.4324 9.21899V14.4836C11.4324 14.9481 11.1864 15.194 10.7219 15.194H9.90217C9.43765 15.194 9.18262 14.9481 9.18262 14.4836V9.21899Z"
+            ></path>
+            <path
+              d="M32.7823 10.4121H32.591C32.1356 10.4121 31.8896 10.1662 31.8896 9.70164V9.37374C31.8896 8.90922 32.1356 8.6633 32.6001 8.6633H32.846V7.4519C32.846 6.98738 33.0919 6.74146 33.5565 6.74146H34.3124C34.777 6.74146 35.0229 6.98738 35.0229 7.4519V8.6633H35.7151C36.1796 8.6633 36.4256 8.90922 36.4256 9.37374V9.70164C36.4256 10.1662 36.1796 10.4121 35.7242 10.4121H35.0229V12.4432C35.0229 13.017 35.3963 13.2356 35.8062 13.2903C36.3254 13.3541 36.5166 13.5089 36.5166 14.0007V14.5837C36.5166 15.1119 36.1887 15.2941 35.5967 15.2941C34.613 15.2941 32.7732 14.8387 32.7732 12.8531V10.4121H32.7823Z"
+            ></path>
+            <path
+              d="M43.8665 6.65039C43.8665 6.18586 44.1125 5.93994 44.577 5.93994H45.3967C45.8612 5.93994 46.1072 6.18586 46.1072 6.65039V12.6527C46.1072 13.1628 46.2802 13.2903 46.4806 13.3176C46.7903 13.3541 46.9998 13.5362 46.9998 13.9279V14.5655C46.9998 15.0118 46.7903 15.2941 46.2711 15.2941C45.1144 15.2941 43.8574 15.0118 43.8574 12.762V6.65039H43.8665Z"
+            ></path>
+            <path
+              d="M43.2754 11.5779C43.2754 9.78353 42.1733 8.38086 40.1786 8.38086C38.0199 8.38086 36.6992 9.91105 36.6992 11.8784C36.6992 13.6545 37.9835 15.3851 40.379 15.3851C41.4082 15.3851 42.2006 15.0572 42.6833 14.784C43.075 14.5654 43.1388 14.2101 42.9293 13.8094L42.7471 13.4724C42.5285 13.0534 42.2188 13.0079 41.7816 13.1991C41.4446 13.3722 41.0165 13.5088 40.5611 13.5088C39.8507 13.5088 39.1676 13.1354 39.0036 12.3156H42.5285C42.9748 12.3156 43.2845 11.924 43.2845 11.5779H43.2754ZM39.2131 9.83818C39.4135 9.83818 39.5865 10.0021 39.5865 10.2116C39.5865 10.4211 39.4226 10.5851 39.2131 10.5851C39.0036 10.5851 38.8397 10.4211 38.8397 10.2116C38.8397 10.0021 39.0036 9.83818 39.2131 9.83818ZM41.8363 11.3866C41.8363 11.3866 41.8181 11.4321 41.7907 11.4321H41.5539C41.5539 11.4321 41.5084 11.4139 41.5084 11.3866V11.0314H38.612V11.3866C38.612 11.3866 38.5937 11.4321 38.5664 11.4321H38.3296C38.3296 11.4321 38.2841 11.4139 38.2841 11.3866V9.82907C38.2841 9.82907 38.3023 9.78353 38.3296 9.78353H38.5664C38.5664 9.78353 38.612 9.80175 38.612 9.82907V10.7126H41.8363V11.3866ZM39.714 10.5759V9.83818C39.714 9.83818 39.7323 9.79264 39.7596 9.79264H41.0621C41.4902 9.79264 41.8454 10.1388 41.8454 10.5759H39.7232H39.714Z"
+            ></path>
+            <path
+              d="M26.1426 11.5869C26.1426 9.79256 25.0405 8.38989 23.0458 8.38989C20.8871 8.38989 19.5664 9.92008 19.5664 11.8875C19.5664 13.6636 20.8507 15.3941 23.2461 15.3941C24.2754 15.3941 25.0678 15.0662 25.5414 14.793C25.9331 14.5744 25.9968 14.2192 25.7873 13.8184L25.6052 13.4814C25.3866 13.0624 25.0769 13.0169 24.6397 13.2082C24.3027 13.3812 23.8746 13.5178 23.4192 13.5178C22.6996 13.5178 22.0256 13.1444 21.8617 12.3247H25.3866C25.8238 12.3247 26.1426 11.933 26.1426 11.5869ZM24.7308 10.5303L21.7342 11.4047C21.6067 11.4412 21.4609 11.3956 21.3789 11.2863L20.9964 10.758C20.96 10.7125 20.9873 10.6396 21.0419 10.6305L21.2241 10.585C21.2241 10.585 21.3061 10.585 21.3425 10.6032L21.7342 10.8673L22.6359 10.5212L21.9619 9.87454C21.9163 9.829 21.9346 9.75613 21.9983 9.72881L22.2078 9.66505C22.2807 9.63772 22.3626 9.64683 22.4264 9.69237L23.3554 10.248L23.9019 10.0385C24.2116 9.92008 24.5668 9.98384 24.8128 10.2115C24.9221 10.3117 24.8765 10.4939 24.7399 10.5303H24.7308Z"
+            ></path>
+            <path
+              d="M19.0468 17.0701V14.784V9.13684C19.0468 8.67232 18.8009 8.41729 18.3273 8.41729H17.5075C17.0886 8.41729 16.8426 8.61767 16.7971 9.00022V9.04576H16.7789C16.7789 9.04576 16.3781 8.38086 15.021 8.38086C13.2449 8.38086 11.9697 9.75621 11.9697 11.8784C11.9697 14.0007 13.1629 15.3851 14.9846 15.3851C16.0138 15.3851 16.5876 14.8386 16.8062 14.5654V14.5836C16.8062 14.6473 16.8062 14.7202 16.8062 14.7931C16.8062 14.9843 16.8062 15.9771 16.8062 16.5874C16.8062 17.3161 16.5967 17.5073 16.4874 17.6166C16.3053 17.7897 16.0229 17.8808 15.6312 17.8899C15.2305 17.8808 14.9481 17.7897 14.766 17.6166C14.602 17.4618 14.3925 17.2341 14.4016 16.7149C14.4016 16.4872 14.347 16.3324 14.2468 16.214C14.1375 16.0773 13.9371 16.0045 13.7276 16.0045H12.917C12.4525 16.0045 12.2156 16.2504 12.2156 16.7331V17.0064C12.2156 17.0064 12.2065 17.0428 12.2248 17.3434C12.3432 18.7643 13.9189 20.0212 15.6221 20.0212C16.706 20.0212 17.7444 19.5111 18.391 18.7734C18.7554 18.3544 19.0377 17.7624 19.0377 17.0519L19.0468 17.0701ZM15.4946 13.5361C14.7113 13.5361 14.1557 12.8894 14.1557 11.8875C14.1557 10.8856 14.7842 10.2845 15.4946 10.2845C16.3781 10.2845 16.8609 11.0769 16.8609 11.8875C16.8609 13.0443 16.1777 13.5361 15.4946 13.5361Z"
+            ></path>
+          </svg>
+          <a href="">虎加酒</a>
+        </div>
+        <div class="huRotate" tabindex="">
+          <svg
+            class="huRotate"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 24"
+            width="50"
+            height="24"
+            fill="currentColor"
+          >
+            <path
+              d="M.93,10.49h-.19c-.45,0-.69-.24-.69-.7v-.32c0-.46.24-.7.7-.7h.24v-1.19c0-.46.24-.7.7-.7h.74c.46,0,.7.24.7.7v1.19h.68c.46,0,.7.24.7.7v.32c0,.46-.24.7-.69.7h-.69v1.99c0,.56.37.78.77.83.51.06.7.22.7.7v.58c0,.52-.32.7-.91.7-.97,0-2.77-.45-2.77-2.4v-2.4Z"
+            ></path>
+            <path
+              d="M5.33,9.35c0-.46.24-.7.7-.7h.81c.46,0,.7.24.7.7v5.18c0,.46-.24.7-.7.7h-.81c-.46,0-.7-.24-.7-.7v-5.18ZM5.35,7.11v-.32c0-.46.24-.7.7-.7h.75c.46,0,.7.24.7.7v.32c0,.46-.24.7-.7.7h-.75c-.46,0-.7-.24-.7-.7Z"
+            ></path>
+            <path
+              d="M10.16,15.89c.32.1.66.18,1.18.18.83,0,1.55-.29,1.55-1.27v-.33c0-.08.01-.24.01-.24h-.03c-.36.52-.83.81-1.61.81-2.02,0-3-1.62-3-3.31s.96-3.23,3.02-3.23c1.41,0,1.8.86,1.8.86h.03s-.01-.05-.01-.13v-.03c0-.31.24-.55.7-.55h.6c.46,0,.7.24.7.7v5.28c0,2.4-1.96,3.28-3.63,3.28-.77,0-1.56-.15-1.96-.32-.43-.18-.55-.46-.38-.91l.14-.38c.17-.43.42-.56.89-.41ZM12.93,11.75c0-1.16-.61-1.42-1.28-1.42-.78,0-1.18.56-1.18,1.32,0,.82.38,1.55,1.27,1.55.58,0,1.19-.29,1.19-1.44Z"
+            ></path>
+            <path
+              d="M19.21,8.49c1.96,0,3.04,1.38,3.04,3.14,0,.35-.31.73-.74.73h-3.46c.17.81.83,1.18,1.53,1.18.45,0,.87-.14,1.2-.31.42-.19.73-.14.95.27l.18.33c.2.4.14.74-.24.96-.47.27-1.25.59-2.26.59-2.35,0-3.62-1.7-3.62-3.45,0-1.93,1.3-3.44,3.43-3.44ZM20.07,11.1c0-.54-.35-.98-.91-.98-.64,0-.95.46-1.06.98h1.97Z"
+            ></path>
+            <path
+              d="M22.9,9.35c0-.46.24-.7.7-.7h.72c.46,0,.7.24.7.7v.41c0,.22-.03.41-.03.41h.03c.22-.68.92-1.58,1.75-1.58.45,0,.6.24.6.7v.72c0,.46-.24.7-.7.7-1.05,0-1.56.89-1.56,1.97v1.85c0,.46-.24.7-.7.7h-.81c-.46,0-.7-.24-.7-.7v-5.18Z"
+            ></path>
+            <path
+              d="M28.25,6.81c0-.35.19-.54.54-.54h.55c.36,0,.54.19.54.54v2.63c0,.32-.04.55-.04.55h.03c.32-.63,1.14-1.32,2.26-1.32,1.44,0,2.28.75,2.28,2.48v3.66c0,.36-.19.54-.54.54h-.55c-.36,0-.54-.18-.54-.54v-3.32c0-.79-.2-1.33-1.02-1.33-1.14,0-1.88.92-1.88,2.16v2.49c0,.36-.18.54-.54.54h-.55c-.35,0-.54-.18-.54-.54V6.81Z"
+            ></path>
+            <path
+              d="M38.82,8.68c1.98,0,3.59,1.42,3.59,3.41s-1.61,3.41-3.59,3.41-3.58-1.41-3.58-3.41,1.6-3.41,3.58-3.41ZM38.82,14.12c1.06,0,1.94-.82,1.94-2.03s-.88-2.03-1.94-2.03-1.93.83-1.93,2.03.87,2.03,1.93,2.03Z"
+            ></path>
+            <path
+              d="M43.35,9.37c0-.35.19-.54.54-.54h.41c.35,0,.52.19.52.45v.29c0,.14-.01.26-.01.26h.03s.58-1.15,2.1-1.15c1.76,0,2.9,1.39,2.9,3.41s-1.28,3.41-2.99,3.41c-1.35,0-1.88-1-1.88-1h-.03s.04.23.04.56v2.3c0,.36-.18.54-.54.54h-.55c-.35,0-.54-.18-.54-.54v-8ZM46.54,14.14c.89,0,1.64-.73,1.64-2.02s-.66-2.05-1.61-2.05c-.84,0-1.65.61-1.65,2.06,0,1.01.56,2.01,1.62,2.01Z"
+            ></path>
+          </svg>
+          <a href="">虎里轉</a>
+        </div>
+      </div>
+
+      <div class="tableSec">
+        <!-- 第一個 -->
+        <div name="" id="comeOut" tabindex="0">
+          <span>⮂ </span>
+          <span id="comeOutSpan">來回</span>
+        </div>
+
+        <!-- 第二個 -->
+
+        <div class="inputBox">
+          <span id="inputBoxSpan">⇆</span>
+          <div id="inputBoxGo" tabindex="0">
+            <label for="departure">出發地</label>
+            <input type="text" autocomplete="off" />
+          </div>
+
+          <div id="inputBoxBack" tabindex="0">
+            <label for="destination">目的地</label>
+            <input type="text" autocomplete="off" />
+          </div>
+        </div>
+
+        <!-- 第三個 -->
+
+        <div class="dateBox">
+          <div id="dateGoBox">
+            <label for="">去程出發日期</label>
+            <input type="text" placeholder="____/__/__" />
+          </div>
+
+          <div id="dateBackBox">
+            <label for="">回程出發日期</label>
+            <input type="text" placeholder="____/__/__" />
+          </div>
+        </div>
+        <?xml version="1.0" encoding="UTF-8"?><svg
+          id="dateArrow"
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          color="#000000"
+        >
+          <path
+            d="M3 12L21 12M21 12L12.5 3.5M21 12L12.5 20.5"
+            stroke="#000000"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+        <?xml version="1.0" encoding="UTF-8"?><svg
+          id="dateCalender"
+          width="24px"
+          height="24px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          color="#000000"
+        >
+          <path
+            d="M15 4V2M15 4V6M15 4H10.5M3 10V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V10H3Z"
+            stroke="#000000"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M3 10V6C3 4.89543 3.89543 4 5 4H7"
+            stroke="#000000"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M7 2V6"
+            stroke="#000000"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M21 10V6C21 4.89543 20.1046 4 19 4H18.5"
+            stroke="#000000"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+
+        <!-- 第四個 -->
+        <div class="peopleBox" tabindex="0">
+          <label id="visitor">旅客人數</label>
+          <label for="" id="visitorNum">1成人 - 0 兒童 - 0 嬰兒</label>
+          <?xml version="1.0" encoding="UTF-8"?><svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            color="#000000"
+          >
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <div class="menuPeople">
+            <p>成人</p>
+            <p>兒童</p>
+            <p>嬰兒</p>
+          </div>
+        </div>
+      </div>
+      <div class="tableThr">
+        <div class="tableThrLeft" tabindex="0">
+          <?xml version="1.0" encoding="UTF-8"?><svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            color="#000000"
+          >
+            <path
+              d="M2 17V7C2 5.89543 2.89543 5 4 5H10H14H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H14H10H4C2.89543 19 2 18.1046 2 17Z"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12C15 13.6569 13.6569 15 12 15Z"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M18.5 12.01L18.51 11.9989"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M5.5 12.01L5.51 11.9989"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <a>加入促銷代碼</a>
+        </div>
+        <button><span class="butSpan">搜尋</span></button>
+      </div>
+    </div>
+    <div class="icons">
+      <div class="order hoverP">
+        <div class="q-img__container absolute-full">
+          <img
+            class="q-img__image q-img__image--with-transition q-img__image--loaded"
+            height="44px"
+            width="44px"
+            loading="lazy"
+            fetchpriority="auto"
+            aria-hidden="true"
+            draggable="false"
+            src="https://strapi-assets.tigerairtw.com/icon_27d4c597ad.png"
+            style="object-fit: cover; object-position: 50% 50%"
+          />
+        </div>
+        <p>管理訂單</p>
+      </div>
+      <span class="separate">|</span>
+      <div class="fly hoverP">
+        <div class="q-img__container absolute-full">
+          <img
+            class="q-img__image q-img__image--with-transition q-img__image--loaded"
+            height="44px"
+            width="44px"
+            loading="lazy"
+            fetchpriority="auto"
+            aria-hidden="true"
+            draggable="false"
+            src="https://strapi-assets.tigerairtw.com/icon_1_4f7736ec26.png"
+            style="object-fit: cover; object-position: 50% 50%"
+          />
+        </div>
+        <p>自住報到</p>
+      </div>
+      <span class="separate">|</span>
+      <div class="calender hoverP">
+        <img
+          class="q-img__image q-img__image--with-transition q-img__image--loaded"
+          height="44px"
+          width="44px"
+          loading="lazy"
+          fetchpriority="auto"
+          aria-hidden="true"
+          draggable="false"
+          src="https://strapi-assets.tigerairtw.com/icon_2_e04440f654.png"
+          style="object-fit: cover; object-position: 50% 50%"
+        />
+        <p>航班動態</p>
+      </div>
+      <span class="separate">|</span>
+      <div class="freeTax hoverP">
+        <img
+          class="q-img__image q-img__image--with-transition q-img__image--loaded"
+          height="44px"
+          width="44px"
+          loading="lazy"
+          fetchpriority="auto"
+          aria-hidden="true"
+          draggable="false"
+          src="https://strapi-assets.tigerairtw.com/icon_3_d2b4b08936.png"
+          style="object-fit: cover; object-position: 50% 50%"
+        />
+        <p>免稅品購買</p>
+      </div>
+      <span class="separate">|</span>
+      <div class="questions hoverP">
+        <img
+          class="q-img__image q-img__image--with-transition q-img__image--loaded"
+          height="44px"
+          width="44px"
+          loading="lazy"
+          fetchpriority="auto"
+          aria-hidden="true"
+          draggable="false"
+          src="https://strapi-assets.tigerairtw.com/icon_4_7401c8ef83.png"
+          style="object-fit: cover; object-position: 50% 50%"
+        />
+        <p>常見問題</p>
+      </div>
+    </div>
+  </body>
+</html>

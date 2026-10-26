@@ -1,0 +1,1037 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+TC:wght@100..900&display=swap");
+
+html {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #f4f4f4 !important;
+}
+
+/* =============導覽列========= */
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+nav {
+  width: 100%;
+  max-width: 1168px;
+  max-height: 57px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  font-size: 14px;
+  padding: 0 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLeft {
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+}
+.navLeft img {
+  display: flex;
+  height: 33.5px;
+  aspect-ratio: 4/2;
+  padding: 16px 24px 16px 0;
+}
+
+nav a,
+.navRight {
+  text-decoration: none;
+  display: inline-flex;
+  padding: 16px 24px;
+  color: rgb(63, 63, 63);
+}
+
+nav span {
+  color: rgba(128, 128, 128, 0.5);
+  padding: 16px 0;
+}
+.separate {
+  width: 1px;
+}
+.titleDiv {
+  display: flex;
+  justify-content: center;
+}
+#menu {
+  display: none;
+}
+/* =============準備出發========= */
+.ready,
+.welcome,
+.coupons,
+.notice {
+  position: relative;
+  display: inline-block;
+}
+.menuReady,
+.menuWelcome,
+.menuCoupons,
+.menuNotice {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  white-space: nowrap;
+  top: 90%;
+  left: 0;
+  min-width: 160px;
+  background-color: white;
+  border-top: solid 1.5px #faa836;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 10px rgba(128, 128, 128, 0.7);
+  z-index: 100;
+}
+.ready:hover .menuReady {
+  display: grid;
+  max-width: 500px;
+  grid-template-columns: 195px 195px;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas:
+    "book tack"
+    "leftPart rightPart";
+  gap: 0 20px;
+}
+.hoverTitle:hover {
+  color: #faa836;
+  cursor: pointer;
+}
+.menuReady .book {
+  grid-area: book;
+}
+.menuReady .tack {
+  grid-area: tack;
+}
+.menuReady .leftPart {
+  grid-area: leftPart;
+}
+.menuReady .rightPart {
+  grid-area: rightPart;
+}
+.menuReady .leftPart a::after,
+.menuReady .rightPart a::after,
+.menuWelcome .welcomePart a::after,
+.menuCoupons .couponsPart a::after,
+.menuNotice .noticePart a::after {
+  display: flex;
+  float: right;
+  content: "";
+  width: 14px;
+  height: 14px;
+  mask: url("./nav-arrow-right.svg") center / contain no-repeat;
+  -webkit-mask: url("./nav-arrow-right.svg") center / contain no-repeat;
+  background-color: rgb(92, 92, 92);
+}
+.menuReady span,
+.menuWelcome span,
+.menuCoupons span,
+.menuNotice span {
+  font-size: 12px;
+  padding: 10px 6px;
+  color: rgb(92, 92, 92);
+  font-weight: bolder;
+}
+.menuReady a,
+.menuWelcome a,
+.menuCoupons a,
+.menuNotice a {
+  gap: 3px;
+  color: rgb(63, 63, 63);
+}
+.menuReady a:hover,
+.menuWelcome a:hover,
+.menuCoupons a:hover,
+.menuNotice a:hover {
+  color: #faa836;
+}
+.menuReady a,
+.menuWelcome a,
+.menuCoupons a,
+.menuNotice a {
+  display: block;
+  line-height: 1.4;
+  padding: 5px;
+}
+/* =============搭乘台虎========= */
+.welcome:hover .menuWelcome {
+  display: grid;
+  max-width: 250px;
+  grid-template-columns: 195px;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas:
+    "tackTaiHu"
+    "welcomePart";
+  gap: 0 20px;
+}
+.tackTaiHu {
+  grid-area: tackTaiHu;
+}
+.welcomePart {
+  grid-area: welcomePart;
+}
+/* =============虎迷優惠========= */
+.coupons:hover .menuCoupons {
+  display: grid;
+  max-width: 250px;
+  grid-template-columns: 195px;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas:
+    "couponsTaiHu"
+    "couponsPart";
+  gap: 0 20px;
+}
+.couponsTaiHu {
+  grid-area: couponsTaiHu;
+}
+.couponsPart {
+  grid-area: couponsPart;
+}
+/* =============虎迷須知========= */
+.notice:hover .menuNotice {
+  display: grid;
+  max-width: 250px;
+  grid-template-columns: 195px;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas:
+    "couponsTaiHu"
+    "couponsPart";
+  gap: 0 20px;
+}
+.noticeTaiHu {
+  grid-area: couponsTaiHu;
+}
+.noticePart {
+  grid-area: couponsPart;
+}
+/* =============navRight========= */
+.navRight {
+  max-width: 400px;
+  align-items: center;
+}
+.titleDiv {
+  margin-left: 20px;
+}
+.navRight span {
+  font-weight: 500;
+  color: rgb(66, 66, 66);
+  padding: 4px 0;
+  margin-left: 4px;
+}
+.navRight svg {
+  width: 20px;
+}
+.navRight path {
+  stroke: rgb(73, 73, 73);
+}
+.flySreach {
+  stroke: #faa836 !important;
+}
+#login:hover path,
+#login:hover span,
+#lang:hover path,
+#lang:hover span,
+#twd:hover path,
+#twd:hover span {
+  stroke: #faa836;
+  color: #faa836;
+}
+
+/* =============banner========= */
+
+#imgWindow {
+  display: flex;
+  justify-self: center;
+  height: 300px;
+  width: auto;
+}
+#imgMobile {
+  display: none;
+}
+/* =============search========= */
+.search {
+  display: grid;
+  position: relative;
+  margin-top: -48px;
+  max-width: 1168px;
+  box-sizing: border-box;
+  width: 90%;
+  max-height: 220px;
+  padding: 16px;
+  gap: 16px 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 73px 40px;
+  justify-self: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(128, 128, 128, 0.7);
+  z-index: 100;
+  background-color: white;
+}
+/* =============search 第一行========= */
+.table {
+  display: flex;
+  max-width: 550px;
+  max-height: 50px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+.table div {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 24px;
+  padding: 0 0 8px 0;
+}
+.table div a {
+  text-decoration: none;
+  color: gray;
+  font-size: 14px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+.table div svg {
+  height: 30px;
+  margin-top: 1px;
+  aspect-ratio: 5.5/2;
+}
+.cardLogo path {
+  opacity: 60%;
+}
+.flyLogo {
+  stroke: rgb(54, 54, 54);
+}
+#flySreachSpan {
+  color: rgb(54, 54, 54);
+  font-weight: 700;
+}
+#flySreach {
+  border-bottom: 2px solid #faa836;
+}
+.huWine,
+.huRotate {
+  fill: gray;
+}
+.cardLogo:hover,
+.cardLogo:hover a,
+.cardLogo:hover path {
+  opacity: 100%;
+  stroke: #faa836;
+  color: #faa836;
+  cursor: pointer;
+}
+.huWine:hover,
+.huWine:hover a,
+.huWine:hover path {
+  opacity: 100%;
+  fill: #faa836;
+  color: #faa836;
+  cursor: pointer;
+}
+.huRotate:hover,
+.huRotate:hover a,
+.huRotate:hover path {
+  opacity: 100%;
+  fill: #faa836;
+  color: #faa836;
+  cursor: pointer;
+}
+
+/* =============search 第二行========= */
+.tableSec {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns:
+    minmax(0, 120px) 16px minmax(250px, 1fr) 16px
+    minmax(0, 320px) 16px minmax(0, 238px);
+
+  grid-template-rows: 57px 16px;
+  grid-template-areas:
+    "comeBack gapA placeGoBack gapB date gapC people"
+    "empty1 empty2 empty3 empty4 empty5 empty6 empty7";
+  align-items: center;
+  position: relative;
+}
+#comeOut {
+  display: inline-flex;
+  box-sizing: border-box;
+  margin-right: 16px;
+  max-height: 57px;
+  max-width: 120px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  font-size: 14px;
+  grid-area: comeBack;
+
+  justify-content: center;
+  align-content: center;
+  color: black;
+  background-color: white;
+}
+#comeOut:hover {
+  display: inline-flex;
+  border: 1px solid black;
+  cursor: pointer;
+}
+#comeOut:focus {
+  display: inline-flex;
+  border: 1px solid #faa836;
+  outline: 1px solid #faa836;
+}
+#comeOut span {
+  display: inline-flex;
+  font-size: 22px;
+  color: black;
+  margin: 10px 8px 0 0;
+  padding-top: 6px;
+}
+#comeOutSpan {
+  padding-top: 10px !important;
+  font-size: 14px !important;
+}
+
+#comeBack {
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+#comeBack + span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#comeBack:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+  color: white;
+}
+#one:hover {
+  grid-area: one;
+  background-color: #faa836;
+  color: white;
+}
+#different:hover {
+  grid-area: different;
+  background-color: #faa836;
+  color: white;
+}
+
+#comeOut::after {
+  display: flex;
+  float: right;
+  content: "";
+  padding-top: 32px;
+  width: 24px;
+  height: 24px;
+
+  mask: url("./nav-arrow-down.svg") center / contain no-repeat;
+  -webkit-mask: url("./nav-arrow-down.svg") center / contain no-repeat;
+  background-color: rgb(92, 92, 92);
+}
+
+#comeOut:focus .option {
+  display: grid;
+}
+/* ======================== */
+.inputBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  grid-area: placeGoBack;
+}
+.inputBox div {
+  display: flex;
+  max-width: 50%;
+  max-height: 35px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+}
+#inputBoxGo {
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+}
+#inputBoxBack {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+#inputBoxBack input {
+  padding-left: 8px;
+}
+#inputBoxGo:hover,
+#inputBoxBack:hover {
+  border: 1px solid black;
+}
+#inputBoxGo:focus-within {
+  border: 1px solid #faa836;
+  outline: 1px solid #faa836;
+}
+#inputBoxBack:focus-within {
+  border: 1px solid #faa836;
+  outline: 1px solid #faa836;
+}
+/* ============*/
+.inputBox input {
+  border: none;
+  height: 24px;
+  width: 100%;
+  background-color: transparent;
+}
+.inputBox input:focus {
+  outline: none;
+}
+#inputBoxGo label,
+#inputBoxBack label {
+  font-size: 14px;
+  color: rgb(128, 128, 128);
+}
+#inputBoxBack label {
+  padding-left: 8px;
+}
+
+#inputBoxSpan {
+  display: inline-flex;
+  position: relative;
+  left: 50%;
+
+  background-color: white;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  color: gray;
+  border-radius: 50%;
+  width: 58px;
+  height: 25px;
+  padding: 0 2px 3px 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* ======================== */
+.dateBox {
+  display: inline-flex;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  max-width: 320px;
+  height: 57px;
+  box-sizing: border-box;
+  width: 100%;
+  grid-area: date;
+}
+.dateBox input {
+  display: block;
+  position: relative;
+  height: 24px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+}
+.dateBox input:focus {
+  outline: none;
+}
+.dateBox label {
+  display: block;
+  height: 12px;
+  width: 100%;
+  padding: 4px 0;
+  font-size: 12px;
+  color: rgb(128, 128, 128);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#dateGoBox,
+#dateBackBox {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12px 0 18px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+#dateGoBox:hover {
+  outline: 1px solid black;
+  border-radius: 5px 0 0 5px;
+}
+
+#dateBackBox:hover {
+  border: 1px solid black;
+  border-radius: 0 5px 5px 0;
+}
+#dateBackBox:focus-within,
+#dateGoBox:focus-within {
+  border: 1px solid #faa836;
+  outline: 1px solid #faa836;
+}
+
+#dateGoBox:focus-within {
+  border-radius: 5px 0 0 5px;
+}
+
+#dateBackBox:focus-within {
+  border-radius: 0 5px 5px 0;
+}
+#dateArrow {
+  display: inline-flex;
+  position: relative;
+  left: 45%;
+  top: -160%;
+  background-color: white;
+  stroke: gray;
+  border-radius: 50%;
+  width: 20px !important;
+  height: 20px !important;
+  padding: 0 5px;
+
+  z-index: 1;
+  grid-area: empty5;
+}
+#dateArrow path {
+  stroke: gray;
+}
+
+#dateCalender {
+  display: flex;
+  position: relative;
+  width: 25px !important;
+  height: 25px !important;
+  top: -225%;
+  left: -300%;
+  background-color: white;
+  padding: 0 1px 0 8px;
+  grid-area: empty6;
+}
+#dateCalender path {
+  stroke: gray;
+}
+/* ======================== */
+.peopleBox {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  flex: 0 1 238px;
+  width: 238px;
+  max-width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  grid-area: people;
+}
+.peopleBox:hover {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#visitor {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: rgb(128, 128, 128);
+  padding-top: 3px;
+}
+#visitorNum {
+  display: block;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 6px;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.peopleBox svg {
+  display: block;
+  position: absolute;
+  right: 3%;
+  top: 46%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.peopleBox:focus-within {
+  border: 1px solid #faa836;
+  outline: 1px solid #faa836;
+  border-radius: 5px;
+}
+.menuPeople {
+  display: none;
+}
+/* =============search 第三行========= */
+.tableThr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3px;
+}
+.tableThrLeft {
+  display: flex;
+  align-items: center;
+}
+.tableThrLeft:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.tableThrLeft path {
+  stroke: rgba(128, 128, 128);
+}
+.tableThrLeft a {
+  padding-left: 10px;
+  color: rgba(128, 128, 128);
+  font-weight: 500;
+  font-size: 14px;
+}
+.tableThr button {
+  display: inline-flex;
+  height: 40px;
+  width: 92px;
+  justify-content: center;
+  align-items: center;
+  background-color: #faa836;
+  border: none;
+  border-radius: 5px;
+}
+.tableThr button:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+.butSpan {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+/* ============icons========= */
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  justify-self: center;
+  max-width: 1200px;
+  width: 100%;
+  height: 70px;
+  padding: 24px 0;
+}
+.order,
+.fly,
+.calender,
+.freeTax,
+.questions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 44px;
+}
+.icons span {
+  display: flex;
+  position: relative;
+  top: 49%;
+  font-size: 12px;
+  height: 12px;
+  opacity: 10%;
+}
+.icons p {
+  padding-top: 8px;
+  color: rgb(73, 73, 73);
+}
+.hoverP:hover p {
+  color: #faa836;
+}
+.hoverP:hover {
+  cursor: pointer;
+}
+/* ============電腦圖片縮放========= */
+
+@media (min-width: 1441px) {
+  #imgWindow {
+    width: 100vw;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1300px) {
+  #dateBackBox svg {
+    left: 20%;
+    top: 46.5%;
+  }
+}
+/* =============手機========= */
+
+@media screen and (max-width: 768px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  nav {
+    max-width: 100vw;
+  }
+  .navLeft {
+    padding: 0;
+  }
+  .navLeft img {
+    padding: 16px 24px;
+    height: 100%;
+    width: clamp(20%, 25%, 30%);
+  }
+  .navRight {
+    padding-right: 0;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+  .ready,
+  .tack,
+  .welcome,
+  .coupons,
+  .notice,
+  .separate,
+  .navRight span {
+    display: none;
+  }
+  .titleIcons {
+    display: inline-flex;
+  }
+
+  /* ===========banner================== */
+
+  #imgWindow {
+    display: none;
+  }
+  #imgMobile {
+    display: flex;
+    min-height: 210px;
+    width: 100%;
+    height: 100%;
+  }
+  /* =============search========= */
+  .search {
+    margin-top: 0;
+    max-width: 90%;
+    max-height: 100%;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 1fr 40px;
+    grid-template-areas:
+      "sreachTitle"
+      "tableSec"
+      "btn";
+  }
+
+  .table {
+    display: flex;
+    grid-area: sreachTitle;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+  .table > div a {
+    display: inline-block;
+    flex-shrink: 0;
+
+    white-space: nowrap;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+  .tableSec {
+    grid-area: tableSec;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 57px 1fr 16px 1fr 8px 8px 57px;
+
+    grid-template-areas:
+      "comeBack"
+      "inputBox"
+      "gap"
+      "dateBox"
+      "dateArrow"
+      "dateCalender"
+      "peopleBox";
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .tableThr {
+    grid-area: btn;
+    padding: 0;
+  }
+  #dateArrow {
+    grid-area: dateArrow;
+  }
+  #dateCalender {
+    grid-area: dateCalender;
+  }
+
+  #comeOut {
+    grid-area: comeBack;
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: start;
+    padding-left: 16px;
+  }
+  #comeOut span {
+    display: inline-flex;
+    font-size: 22px;
+    color: black;
+    margin: 10px 8px 0 0;
+    padding-top: 6px;
+  }
+
+  #comeOut::after {
+    position: absolute;
+    right: 2%;
+    top: 3%;
+  }
+  /* ================== */
+  .inputBox {
+    grid-area: inputBox;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 16px 57px 57px;
+    grid-template-areas:
+      "inputBoxSpan"
+      "inputBoxGo"
+      "inputBoxBack";
+  }
+  #inputBoxGo input,
+  #inputBoxBack input {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  #inputBoxGo {
+    grid-area: inputBoxGo;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  #inputBoxBack {
+    grid-area: inputBoxBack;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+  }
+  #inputBoxBack label {
+    padding: 0;
+  }
+  #inputBoxSpan {
+    display: inline-flex;
+    position: absolute;
+    left: 73vw;
+    top: 375%;
+    width: 25px;
+    height: 25px;
+    padding-left: 1px;
+    font-size: 16px;
+    transform: rotate(90deg);
+    grid-area: inputBoxSpan;
+  }
+  /* ================== */
+
+  .dateBox {
+    grid-area: dateBox;
+    display: grid;
+    max-width: 100%;
+    height: 114px;
+    grid-template-columns: 100%;
+    grid-template-rows: 57px 57px;
+    grid-template-areas:
+      "dateGoBox"
+      "dateBackBox";
+  }
+  #dateGoBox {
+    grid-area: dateGoBox;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 5px 5px 0 0;
+  }
+
+  #dateBackBox {
+    grid-area: dateBackBox;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 0 0 5px 5px;
+  }
+
+  #dateBackBox label,
+  #dateGoBox label {
+    padding: 0;
+  }
+  #dateGoBox::after,
+  #dateBackBox::after {
+    display: flex;
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    right: 2%;
+    mask: url("./calendar.svg") center / contain no-repeat;
+    -webkit-mask: url("./calendar.svg") center / contain no-repeat;
+    background-color: rgb(92, 92, 92);
+  }
+  #dateArrow {
+    display: none;
+  }
+
+  /* ================== */
+
+  .peopleBox {
+    grid-area: peopleBox;
+    width: 100%;
+    height: 100%;
+  }
+  #visitor {
+    padding: 0;
+  }
+  .peopleBox svg {
+    right: 2%;
+    top: 30%;
+  }
+  /* ===================== */
+  #inputBoxGo:hover,
+  #inputBoxGo:focus-within,
+  #dateGoBox:hover,
+  #dateGoBox:focus-within {
+    border-radius: 5px 5px 0 0;
+  }
+  #inputBoxBack:hover,
+  #inputBoxBack:focus-within,
+  #dateBackBox:hover,
+  #dateBackBox:focus-within {
+    border-radius: 0 0 5px 5px;
+  }
+  /* =========================== */
+  .icons {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 120px 2px 120px 2px 120px 2px 120px 2px 120px;
+    grid-template-rows: 70px;
+    grid-template-areas: "order sapn1 fly span2 calender span3 freetax span4 question";
+    overflow: hidden;
+    margin-top: 16px;
+    padding: 0;
+    z-index: 1;
+    justify-content: center;
+  }
+  .hoverP {
+    width: 120px !important;
+    height: 70px;
+    margin: 0 auto;
+  }
+}
